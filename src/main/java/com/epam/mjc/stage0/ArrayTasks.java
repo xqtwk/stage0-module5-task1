@@ -77,7 +77,8 @@ public class ArrayTasks {
      */
     public String[] reverseArray(String[] arr) {
         String[] newArr = new String[arr.length];
-        for (int i = arr.length; i > 0; i--) {
+
+        for (int i = arr.length-1; i >= 0; i--) {
             for (int j = 0; i > newArr.length; j++) {
                 newArr[j] = arr[i];
                 break;
@@ -133,7 +134,7 @@ public class ArrayTasks {
             }
         }
         for (int i = 0; i < arr.length - 1; i++) {
-            for (int j = 0; j < arr.length - 1; j++) {
+            for (int j = 0; j < arr[i].length - 1; j++) {
                 if (arr[i][j] > arr[i][j+1]) {
                     int temp = arr[i][j];
                     arr[i][j] = arr[i][j + 1];
